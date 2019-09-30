@@ -1,0 +1,73 @@
+html{
+	font-family:cursive;
+}
+body{
+	background-image:url("wt.jpg");
+	background-size:100%;
+	background-repeat:no-repeat;
+}
+
+.ip{
+	margin-left:800px;
+}
+.b{
+		background-color:black;
+		color:white;
+		width:1000px;
+		height:400px;
+		margin-left:140px;
+		margin-top:30px;
+		border:15px solid white;
+}
+div{
+	border:5px;
+}
+.dd{
+	padding-left:440px;
+}
+.aa{
+	padding-left:350px;
+}
+.aaa{
+	margin-top:-15px;
+	/*margin-left:30px;*/
+}
+#abc{
+	color:orange;
+	margin-top:20px;
+	/*cursor:pointer;*/
+}
+.c{
+	background-color:white;
+		color:black;
+		width:1000px;
+		height:400px;
+		margin-left:140px;
+		margin-top:30px;
+		border:15px solid black;
+}
+input{
+	background-color:black;
+	color:orange;
+	width:100px;
+	height:30px;
+	font-family:cursive;
+	cursor:pointer;
+	margin-left:10px;
+	border-color:orange;
+	padding-bottom:5px;
+}
+.d{
+	background-color:white;
+		color:black;
+		width:1000px;
+		height:500px;
+		margin-left:140px;
+		margin-top:30px;
+		border:15px solid black;
+}
+#m{
+	width:800px;
+	height:30px;
+	margin-left:200px;
+}

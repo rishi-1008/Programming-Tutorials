@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>register</title>
+<link rel="stylesheet" type="text/css" href="reg.css">
+<script>
+function val(myform)
+{
+var user=myform.t1.value;
+var pwd=myform.p1.value;
+var rpwd=myform.p2.value;
+var email=myform.t3.value;
+var un=/^[a-z A-Z]+$/g;
+var u=un.exec(user);
+var pd=/^[a-z A-Z 0-9 . - _]+$/g;
+var p=pd.exec(pwd);
+var en=/^([a-z A-Z 0-9 . _])+@([a-z A-Z])+.([a-z A-Z]{2,3})+$/g;
+var e=en.exec(email);
+var ch=0;
+var ht=document.getElementsByName('c');
+for(var i=0;i<ht.length;i++){
+if(ht[i].checked){
+ch++;
+}}
+if(ch==0){
+alert('please select a course');
+return false;
+}
+if(pwd!=rpwd)
+{
+alert("passwords didn't match");
+return false;
+}
+else if(!u)
+{
+alert("fields should be as per provided format");
+myform.t1.focus();
+return false;
+}
+else if(!p)
+{
+alert("fields should be as per provided format");
+myform.p1.focus();
+return false;
+}
+else if(!e)
+{
+alert("fields should be as per provided format");
+myform.t3.focus();
+return false;
+}
+else
+return true;
+}
+</script>
+</head>
+<body id="demo">
+<p class="asd">REGISTER NOW!!!!!!!</p>
+<div id="we"><marquee>CONTROLLING COMPLEXITY IS THE ESSENCE OF COMPUTER PROGRAMMING</marquee></div>
+<div class="a">
+<form method="post" action="reg" class="b" onsubmit="return val(myform)" name="myform">
+<p class="para">*should contain only alphabets a-z</p><BR>
+<input type="text" name="t1" placeholder="USERNAME" class="d"><br>
+<p class="para">*should be in email format</p><br>
+<input type="text" name="t3" placeholder="E-MAIL" class="d"><br>
+<p class="para">*should contain atleast 1 alphabet,spl char,numbers</p><br>
+<input type="password" name="p1" placeholder="PASSWORD" class="d"><br>
+<input type="password" name="p2" placeholder="RE-ENTER PASSWORD" class="d"><br>
+SELECT THE COURSES:<br>
+<input type="checkbox" value="c" name="c">C  <input type="checkbox" value="java" name="c">JAVA 
+<input type="checkbox" value="html" name="c">HTML <input type="checkbox" value="python" name="c">PYTHON <br> 
+<input type="submit" value="REGISTER" id="c">
+</form>
+
+</div>
+</body>
+</html>
